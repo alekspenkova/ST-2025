@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hearts-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%);
+    animation: fall 5s infinite ease-in;
+}
+
+.heart:nth-child(1) {
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 40%;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(3) {
+    left: 60%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(4) {
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.heart:nth-child(5) {
+    left: 50%;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) scale(0.5);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(300px) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(600px) scale(0.5);
+        opacity: 0;
+    }
+}
